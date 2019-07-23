@@ -6,6 +6,7 @@ Notes on list of things done step by step
 
 ### Topics
 + [Code Execution Related imformation](#Code-Execution-Related-information)
++ [Big-O](#Big-O)
 + [Useful links](#Useful-links)
 
 ## Code Execution Related information
@@ -18,10 +19,7 @@ This section covers the behind the scenes after you hit Run to the part where th
 + [Instruction and Programs](https://youtu.be/zltgXvg6r3k)
 + [Advanced CPU Desing](https://youtu.be/rtAlC5J1U40)
 
-
-
-
-
+## Big-O Algorithmic complexity/ Asymptotic analysis
 
 
 
@@ -48,4 +46,13 @@ This section covers the behind the scenes after you hit Run to the part where th
 + [GeeksForGeeks](https://www.geeksforgeeks.org/google-interview-preparation/)
 + [How Prajakta Tathavadkar](https://blog.usejournal.com/how-i-got-into-google-161c97913b8b)
 + [The myth of the Genius Programmers](https://youtu.be/0SARbwvhupQ)
++ [The mind behind Linux](https://youtu.be/o8NPllzkFhE)
++ [ABC](https://medium.com/always-be-coding/abc-always-be-coding-d5f8051afce2#.4heg8zvm4)
++ [Top Coder](https://www.topcoder.com/community/competitive-programming/tutorials/)
+</details>
+
+<details open>
+<summary>List of questions</summary>
+
++ [50 Operating System Interview Q&A](https://career.guru99.com/top-50-operating-system-interview-questions/)
 </details>

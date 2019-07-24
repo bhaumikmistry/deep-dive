@@ -6,7 +6,7 @@ Notes on list of things done step by step
 
 ### Topics
 + [Code Execution Related imformation](#Code-Execution-Related-information)
-+ [Big-O](#Big-O)
++ [Big-O](#Big-O-Algorithmic-complexity/-Asymptotic-analysis)
 + [Useful links](#Useful-links)
 
 ## Code Execution Related information
@@ -21,9 +21,13 @@ This section covers the behind the scenes after you hit Run to the part where th
 
 ## Big-O Algorithmic complexity/ Asymptotic analysis
 
+### code
 
+<details open>
+<summary>Links to study</summary>
 
-
++
+</details>
 
 
 

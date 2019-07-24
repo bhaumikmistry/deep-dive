@@ -1,7 +1,12 @@
-# BigONotation
+## Big-O Algorithmic complexity/ Asymptotic analysis
+How time scales with respect to some input variable.
+
++ Different steps get added 
++ Drop constants
++ Different input different variable
 
 ## bigO(N)
-Code Run
+Code
 ```
 BigONotation bigON1(10000);
 bigON1.generateRandomArray();

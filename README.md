@@ -6,7 +6,7 @@ Notes on list of things done step by step
 
 ### Topics
 + [Code Execution Related imformation](#Code-Execution-Related-information)
-+ [Big-O](#https://github.com/bhaumikmistry/deep-dive/blob/master/BigO/README.md)
++ [Big-O](https://github.com/bhaumikmistry/deep-dive/blob/master/BigO/README.md)
 + [Useful links](#Useful-links)
 
 ## Code Execution Related information

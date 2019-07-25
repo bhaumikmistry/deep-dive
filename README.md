@@ -6,11 +6,11 @@ Notes on list of things done step by step
 
 ### Topics
 + [Code Execution Related imformation](#Code-Execution-Related-information)
-+ [Big-O](#Big-O-Algorithmic-complexity/-Asymptotic-analysis)
++ [Big-O](#https://github.com/bhaumikmistry/deep-dive/blob/master/BigO/README.md)
 + [Useful links](#Useful-links)
 
 ## Code Execution Related information
-This section covers the behind the scenes after you hit Run to the part where the single memory location is fetched-decoded-and-executed. 
+This section covers behind the scenes, from run till single memory location is fetched-decoded-and-executed. 
 
 ### Things to keep in mind
 + [ALU](https://youtu.be/1I5ZMmrOfnA)
@@ -18,27 +18,6 @@ This section covers the behind the scenes after you hit Run to the part where th
 + [CPU](https://youtu.be/FZGugFqdr60)
 + [Instruction and Programs](https://youtu.be/zltgXvg6r3k)
 + [Advanced CPU Desing](https://youtu.be/rtAlC5J1U40)
-
-## Big-O Algorithmic complexity/ Asymptotic analysis
-
-### code
-
-<details open>
-<summary>Links to study</summary>
-
-+
-</details>
-
-
-
-
-
-
-
-
-
-
-
 
 ## Useful links
 <details open>

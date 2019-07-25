@@ -6,6 +6,8 @@ How time scales with respect to some input variable.
 + [Different input different variable](#Give-separate-input-separate-variable)
 + [Drop non dominant term](#Drop-non-dominant-term)
 
++ [Links](#Links)
+
 ## Different steps get added 
 > Different steps of the alogrithm contributes to asymptotic analysis for instance.
 ```
@@ -73,3 +75,11 @@ Time Taken by QuickSort = 1655[µs]
 Time Taken by QuickSort = 1755[µs] 
 
 ```
+
+## Links
++ [Youtube code help](https://www.youtube.com/watch?v=V6mKVRU1evU)
++ [stonybrook.edu](http://www3.cs.stonybrook.edu/~algorith/video-lectures/2007/lecture2.pdf)
++ [Complexity blog](http://discrete.gr/complexity/)
++ TopCoder
+    + [Part1](https://www.topcoder.com/community/competitive-programming/tutorials/computational-complexity-section-1/)
+    + [Part2](https://www.topcoder.com/community/competitive-programming/tutorials/computational-complexity-section-2/)

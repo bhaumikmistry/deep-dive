@@ -1,9 +1,50 @@
-## Big-O Algorithmic complexity/ Asymptotic analysis
+# Big-O Algorithmic complexity/ Asymptotic analysis
 How time scales with respect to some input variable.
 
-+ Different steps get added 
-+ Drop constants
-+ Different input different variable
++ [Different steps get added](#Different-steps-get-added) 
++ [Drop constants](#Drop-Constants)
++ [Different input different variable](#Give-separate-input-separate-variable)
++ [Drop non dominant term](#Drop-non-dominant-term)
+
+## Different steps get added 
+> Different steps of the alogrithm contributes to asymptotic analysis for instance.
+```
+function something()
+    step(); // O(a)
+    step(); // O(b)
+
+Total O(a+b)
+```
+## Drop Constants
+> Give more importance to the scalable factor and drop the constants.
+```
+function something()
+    step(); // O(n)
+    step(); // O(n)
+
+Total O(2n) -> O(n)
+```
+
+## Give separate input separate variable
+> Different Inputs gives different scalability
+```
+function something()
+    for a in array
+        for b in array
+            step();
+
+Total O(n^2) -> O(a * b)
+```
+> a & b can vary independently and change the scaled time.
+
+## Drop non dominant term
+> The impact of higher term will always dominate the most whent he scale is very high.
+```
+45N^3+3N
+N^3 will dominate the total when the solution is scaled
+
+O(n^3) will be the best case
+```
 
 ## bigO(N)
 Code

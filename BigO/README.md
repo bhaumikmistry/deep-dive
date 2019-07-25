@@ -46,7 +46,7 @@ N^3 will dominate the total when the solution is scaled
 O(n^3) will be the best case
 ```
 
-## Time for O(N)
+## Time to see the difference
 ```
 O(N)
 Time Taken by LinearSearchForValue = 30[µs] Found? False
@@ -59,5 +59,17 @@ Time Taken by BubbleSort = 306377[µs]
 Time Taken by BubbleSort = 698673[µs] 
 Time Taken by BubbleSort = 2986870[µs] 
 Time Taken by BubbleSort = 16684941[µs] 
+
+O(logN)
+Time Taken by BinarySearch = 26[µs] Found match at 369 iteration 9
+Time Taken by BinarySearch = 7[µs] Found match at 715 iteration 10
+Time Taken by BinarySearch = 7[µs] Found match at 818 iteration 8
+Time Taken by BinarySearch = 11[µs] Found match at 2254 iteration 10
+
+O(NlogN)
+Time Taken by QuickSort = 1361[µs] 
+Time Taken by QuickSort = 1798[µs] 
+Time Taken by QuickSort = 1655[µs] 
+Time Taken by QuickSort = 1755[µs] 
 
 ```

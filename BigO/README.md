@@ -46,29 +46,18 @@ N^3 will dominate the total when the solution is scaled
 O(n^3) will be the best case
 ```
 
-## bigO(N)
-Code
+## Time for O(N)
 ```
-BigONotation bigON1(10000);
-bigON1.generateRandomArray();
-bigON1.linearSearchForValue(123);
-
-BigONotation bigON2(15000);
-bigON2.generateRandomArray();
-bigON2.linearSearchForValue(123);
-
-BigONotation bigON3(30000);
-bigON3.generateRandomArray();
-bigON3.linearSearchForValue(123);
-
-BigONotation bigON4(70000);
-bigON4.generateRandomArray();
-bigON4.linearSearchForValue(123);
-```
-Time for O(N)
-```
+O(N)
 Time Taken by LinearSearchForValue = 30[µs] Found? False
 Time Taken by LinearSearchForValue = 43[µs] Found? False
 Time Taken by LinearSearchForValue = 89[µs] Found? False
 Time Taken by LinearSearchForValue = 219[µs] Found? False
+
+O(N^2)
+Time Taken by BubbleSort = 306377[µs] 
+Time Taken by BubbleSort = 698673[µs] 
+Time Taken by BubbleSort = 2986870[µs] 
+Time Taken by BubbleSort = 16684941[µs] 
+
 ```

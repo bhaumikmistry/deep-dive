@@ -62,4 +62,31 @@ public:
         std::cout << "Found? " << val << std::endl;
     }
 
+    /* O(n^2) */
+    void BubbleSort()
+    {
+
+        begin = std::chrono::steady_clock::now();
+
+        for(int i=arraySize-1; i>1; i--)
+        {
+            for(int j=0; j<i; j++)
+            {
+                if(theArray[j]>theArray[j+1])
+                {
+                    int temp = theArray[j];
+                    theArray[j] = theArray[j+1];
+                    theArray[j+1] = temp;
+                }
+            }
+        }
+
+        end = std::chrono::steady_clock::now();
+
+        std::cout   << "Time Taken by BubbleSort = " 
+                    << std::chrono::duration_cast<std::chrono::microseconds>(end - begin).count() 
+                    << "[µs] " << std::endl;
+    }
+
+
 };

@@ -7,6 +7,7 @@ Notes on list of things done step by step
 ### Topics
 + [Code Execution Related imformation](#Code-Execution-Related-information)
 + [Big-O](https://github.com/bhaumikmistry/deep-dive/blob/master/BigO/README.md)
++ [Data Structure](#Data-structure)
 + [Useful links](#Useful-links)
 
 ## Code Execution Related information
@@ -18,6 +19,9 @@ This section covers behind the scenes, from run till single memory location is f
 + [CPU](https://youtu.be/FZGugFqdr60)
 + [Instruction and Programs](https://youtu.be/zltgXvg6r3k)
 + [Advanced CPU Desing](https://youtu.be/rtAlC5J1U40)
+
+## Data Structure
++ [Arrays](DS/Arrays/README.md)
 
 ## Useful links
 <details open>

@@ -129,7 +129,7 @@ public:
     }
 
     /* O(NlogN) */
-    void QS(int low,int high)
+    void QSWrap(int low,int high)
     {
         begin = std::chrono::steady_clock::now();
         this->QuickSort(low,high);

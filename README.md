@@ -5,6 +5,7 @@
 Notes on list of things done step by step
 
 ### Topics
++ [C++](/C++/README.md)
 + [Code Execution Related imformation](#Code-Execution-Related-information)
 + [Big-O](https://github.com/bhaumikmistry/deep-dive/blob/master/BigO/README.md)
 + [Data Structure](#Data-structure)

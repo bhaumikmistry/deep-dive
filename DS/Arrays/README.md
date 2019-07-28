@@ -32,3 +32,7 @@
 ## Links
 + [Coursera singly linked lists](https://www.coursera.org/lecture/data-structures/singly-linked-lists-kHhgK)
 + [UCBerkeley Webcast](https://archive.org/details/ucberkeley_webcast_Wp8oiO_CZZE)
+
+## Things to keep in mind
++ Constraints makes the data structiure faster and better with speed access.
++ Flexiblity comes with overhead.

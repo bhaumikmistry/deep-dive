@@ -21,7 +21,7 @@ This section covers behind the scenes, from run till single memory location is f
 + [Instruction and Programs](https://youtu.be/zltgXvg6r3k)
 + [Advanced CPU Desing](https://youtu.be/rtAlC5J1U40)
 
-## Data Structure
+## [Data Structure](DS/README.md)
 + [Arrays](DS/Arrays/README.md)
 
 ## Useful links

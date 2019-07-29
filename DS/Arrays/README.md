@@ -1,14 +1,5 @@
 # DS
 
-## The Five requirements of any data structure
-+ How to ```Access```
-+ How to ```Insert```
-+ How to ```Delete```
-+ How to ```Find```
-+ How to [```Sort```](#Sort)
-
-
-
 ## Arrays 
 > Contiguous area of memory consisting of equal-size elements indexed by cintiguous integers.
 > Defining array
@@ -61,3 +52,11 @@
 + Constraints makes the data structiure faster and better with speed access.
 + Flexiblity comes with overhead.
 
+# Arrays vs Vector
+|       Arrays         |        Vector    |
+|-------------------|------------------|
+|Are a builtin language construct | Is a template class|
+|Come almost unmodified form c89| Is a c++ only construct|
+|Provide just a contiguous, indexable sequence of elements|Is implemented as dynamic array |
+|Fixed size, cant resize in c++|grows and shrinks dynamically|
+[link](https://stackoverflow.com/a/15079462)

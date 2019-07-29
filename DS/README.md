@@ -26,4 +26,4 @@ Different dta structures are better suited for different tasks. Choosing the wro
     + Data structures that utilze dynamic memory allocation (e.g heaps or linked lists) allow you to allocate and reallocate memory within the life of the program.
 3. How long will it take different data structures to accomplish various tasks relative to other data structres?
 
-# [Arrays](/Arrays/README.md)
+# [Arrays](Arrays/README.md)

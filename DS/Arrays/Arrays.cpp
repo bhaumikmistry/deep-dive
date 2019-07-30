@@ -1,6 +1,7 @@
 
 #include <vector>
 
+/* template vector class */
 template<class T>
 class bVector
 {
@@ -27,3 +28,35 @@ public:
     std::vector<int> test;
 
 };
+
+template<class T>
+void bVector<T>::reserve(int n,bool copy)
+{
+    if(n==0)
+        return;
+
+    T * temp = new T[n];
+    if(temp == NULL)
+    {
+        throw memoryAllocationError("Error creating new vector");
+    }
+    if(copy)
+    {
+        if(size>n)
+        {
+            size = n;
+        }
+        for(i=0;i<this->size;i++)
+        {
+            temp[i] = array[i];
+        }
+    }
+
+    if(array!=NULL)
+        {
+            delete [] array;
+        }
+    array = temp;
+    capacity = n;
+
+}

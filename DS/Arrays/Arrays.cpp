@@ -23,7 +23,7 @@ public:
     void pop_back();
     void erase(int index);
     void remove(int index);
-    int fine(T data);
+    int find(T data);
     void resize();
 };
 

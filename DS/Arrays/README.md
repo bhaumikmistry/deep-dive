@@ -60,3 +60,7 @@
 |Provide just a contiguous, indexable sequence of elements|Is implemented as dynamic array |
 |Fixed size, cant resize in c++|grows and shrinks dynamically|
 [link](https://stackoverflow.com/a/15079462)
+
+# Vector implementation
++ [Explanation](https://codereview.stackexchange.com/a/60502)
++ [Short notes](https://codereview.stackexchange.com/a/60488)

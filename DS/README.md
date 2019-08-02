@@ -27,3 +27,4 @@ Different dta structures are better suited for different tasks. Choosing the wro
 3. How long will it take different data structures to accomplish various tasks relative to other data structres?
 
 # [Arrays](Arrays/README.md)
+# [LinkedList](LinkedList/README.md)

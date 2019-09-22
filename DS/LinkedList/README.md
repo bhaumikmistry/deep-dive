@@ -10,7 +10,7 @@ Linked list is a linear data structure, Unlike arrays, linked list elemets are n
 + The size of the array is fixed. The allocated memory is equal to the upper limt irrespective of the usage.
 + Inserting a new element in an array of elements is expensive because the room has to be created for the new elements and to create room existing elements have to be shifted.
 
-#### Advamtages over arrays 
+#### Advantages over arrays 
 + Dynamic size
 + Ease of Insertion/deletion
 

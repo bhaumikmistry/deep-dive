@@ -25,7 +25,7 @@ This section covers behind the scenes, from run till single memory location is f
 + [Arrays](DS/Arrays/README.md)
 + [LinkedList](DS/LinkedList/README.md)
 + [Stack](DS/Stack/README.md)
-
++ [Queue](DS/Queue/README.md)
 
 ## Useful links
 <details open>

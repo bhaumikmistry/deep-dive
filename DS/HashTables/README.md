@@ -24,3 +24,33 @@ A hash function is an function that can be used to map a data set of an arbitrar
 * Uniform distribution
 * Less collisions
 
+### Collision resolution techniques
+* Separate Chaining (open hashing)
+
+    Separate hashing is one of the most commonly used collision resolution techniques. Usually implemented using ```Linked Lists```. In separate chaining each element of the hash table is linked list. To store an element in the hash table you must insert it into a specific linked list. Items with same hash values gets stored in the same linked list.
+
+* Linear Probing or Open addressing or Closed hashing.
+
+    In open addressing, instead of in linked list, all entry records are stored in the same array itself. When a new entry has to be inserted, the hash index of the hashed value is compared and then the array is examined. If the slot at the hashed index in unoccupied, then the entry record is inserted in slot at the hashed index else it proceeds in some prove sequence until it finds an unoccupied slot.
+
+    Linear probing when the interval between successive proves is fixed.
+
+    ```
+    index = index % hashTableSize
+    index = index+1 % hashTableSize
+    
+    ```
+
+* Quadratic Probing
+
+    Quadratic probing is similar to linear probing and the only difference is the interval between successive probes or entry slots. Here, when the slot at a hashed index for an entry record is already occupied, you must start traversing until you find an unoccupied slot. The interval between slots is computed by adding the successive value of arbitrary polynomial in the original hashed index.
+
+    ```
+    index = index % hashTableSize
+    index = index+1*1 % hashTableSize
+    index = index+2*2 % hashTableSize    
+    ```
+
+* Double Hashing
+
+    The interval between probes is computed by two different two hash functions.

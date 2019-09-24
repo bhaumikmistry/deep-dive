@@ -70,6 +70,7 @@ class queue{
 int main( int arg, char ** args)
 {
     queue q;
+    q.print();
     for (int i=0;i<7;i++)
     {
         q.add(i*i*i*2);

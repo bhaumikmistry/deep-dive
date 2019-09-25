@@ -2,6 +2,10 @@
 #include <string>
 #include <iostream>
 
+/**
+ * @brief HashEntry node used for linked list
+ * 
+ */
 struct HashEntry{
     int _key;
     int _data;
@@ -12,11 +16,21 @@ struct HashEntry{
     }
 };
 
+/**
+ * @brief HashTable holds the array of nodes for link lists associated with hash codes.
+ * 
+ */
 class HashTable{
     public:
     HashEntry** _table;
     std::vector<int> test;
     int _size=0;
+
+    /**
+     * @brief Construct a new Hash Table object
+     * 
+     * @param s size of the array 
+     */
     HashTable(int s){
         _size=s;
         _table = new HashEntry*[_size];
@@ -25,6 +39,11 @@ class HashTable{
         }
     }
 
+    /**
+     * @brief Destroy the Hash Table object
+     * Deletes all the pointers created in the linked lists
+     * 
+     */
     ~HashTable()
     {
         std::cout << " Delete HashTable" << std::endl ;
@@ -41,10 +60,22 @@ class HashTable{
         }
     }
 
+    /**
+     * @brief 
+     * Generates simple hash keys
+     * @param k 
+     * @return int 
+     */
     int hashKey(int k){
         return k % _size;
     }
 
+    /**
+     * @brief Simple insert keys and data 
+     * 
+     * @param k 
+     * @param d 
+     */
     void insertKey(int k,int d){
         int hash_key = hashKey(k);
         HashEntry * prev=nullptr;
@@ -71,6 +102,11 @@ class HashTable{
         return nullptr;
     }
 
+    /**
+     * @brief 
+     * Ease for visual understanding
+     * 
+     */
     void printKey()
     {
         for(int i =0; i<_size;i++)

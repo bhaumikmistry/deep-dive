@@ -99,6 +99,31 @@ class HashTable{
 
     HashEntry * deleteKey(int k)
     {
+        int hash_key = hashKey(k);
+        HashEntry * prev=nullptr;
+        HashEntry * curr = _table[hash_key];
+
+        while(curr!=nullptr)
+        {
+            if( curr!=nullptr && curr->_key == k)
+            {
+                if(prev==nullptr){
+                    prev = curr->_next_node;
+                    if(prev!=nullptr)
+                    {
+                        _table[hash_key]=prev;
+                    }
+                }else{
+                    prev->_next_node = curr->_next_node;
+                }
+                return curr;
+            }
+            prev = curr;
+            curr = curr->_next_node;
+
+        }
+        std::cout<<"entry not presetn " << k << std::endl;
+
         return nullptr;
     }
 
@@ -130,10 +155,24 @@ class HashTable{
 
 int main( int args, char ** argv)
 {
-    HashTable * ht =  new HashTable(10);
-    for(int i=0;i<25;i++){
+    HashTable * ht =  new HashTable(2);
+    std::vector<int> keys;
+    keys.push_back(39);
+    keys.push_back(43);
+    for(int i=0;i<5;i++){
+        keys.push_back(i);
         ht->insertKey(i,i*2*i*i);
     }
     ht->printKey();
+    
+    for(int i :keys)
+    {
+        HashEntry * data =  ht->deleteKey(i);
+        delete data;
+        ht->printKey();
+    }
+    
+    ht->printKey();
+
     delete ht;
 }

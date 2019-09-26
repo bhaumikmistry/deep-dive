@@ -32,3 +32,5 @@ Different dta structures are better suited for different tasks. Choosing the wro
 ## [LinkedList](LinkedList/README.md)
 ## [Stack](Stack/README.md)
 ## [Queue](Queue/README.md)
+## [HashTable](HashTables/README.md)
+## [Trees](Trees/README.md)

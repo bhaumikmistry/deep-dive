@@ -113,6 +113,9 @@ class HashTable{
                     {
                         _table[hash_key]=prev;
                     }
+                    else{
+                        _table[hash_key]=nullptr;
+                    }
                 }else{
                     prev->_next_node = curr->_next_node;
                 }
@@ -165,10 +168,9 @@ int main( int args, char ** argv)
     }
     ht->printKey();
     
-    for(int i :keys)
-    {
-        HashEntry * data =  ht->deleteKey(i);
-        delete data;
+    for(int i=0;i<5;i++){
+        HashEntry * temp = ht->deleteKey(i);
+        delete temp; temp = nullptr;
         ht->printKey();
     }
     

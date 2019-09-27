@@ -12,7 +12,7 @@ class BSTree
 {
     private:
     BSTNode * _tree=nullptr;
-
+    int print_helper = 0;
     public:
     void insert(int i)
     {
@@ -49,22 +49,24 @@ class BSTree
     void print()
     {
         print(_tree);
+        std::cout << std::endl;
     }
 
     private:
     void print(BSTNode * node)
     {   
-        std::cout << " --> ";
         if(node==nullptr){
-            std::cout << " |||";
-            std::cout << std::endl;
+            std::cout << "X";      
         }else
         {
-            std::cout << " " << std::to_string(node->_data) << " " << std::endl;
+            std::cout << "{";
+            std::cout << std::to_string(node->_data);
+            std::cout << ",";
             print(node->_left);
+            std::cout << ",";
             print(node->_right);
+            std::cout << "}";
         }
-        
     }
 
 };
@@ -75,8 +77,10 @@ int main( int args, char ** argv){
     btr.insert(4);
     btr.insert(1);
     btr.insert(2);
-    btr.insert(5);
+    btr.insert(0);
     btr.insert(6);
+    btr.insert(5);
+    btr.insert(7);
     btr.print();
     return 0;
 }

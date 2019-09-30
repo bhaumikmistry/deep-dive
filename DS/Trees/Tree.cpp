@@ -1,4 +1,6 @@
 #include <iostream>
+#include <exception>
+
 
 struct BSTNode
 {
@@ -99,9 +101,7 @@ class BSTree
     public:
     void deleteNode(int data)
     {
-        BSTNode * temp = deleteNode(_tree,data);
-        if(temp!=nullptr)
-            delete temp;
+        _tree = deleteNode(_tree,data);
     }
 
     private:
@@ -117,20 +117,21 @@ class BSTree
         {
             if(node->_left == nullptr && node->_right == nullptr)
             {
-                delete node;
-                return nullptr;
+                delete node; node = nullptr;
+                return node;
             }
-            else if(node->_left==nullptr)
+            else if(node->_left == nullptr)
             {
                 BSTNode * temp = node->_right;
                 node = node->_right;
-                delete temp;
+                delete temp; temp=nullptr;
+                
             }
             else if(node->_right == nullptr)
             {
-                BSTNode * temp = node->_right;
+                BSTNode * temp = node->_left;
                 node = node->_left;
-                delete temp;
+                delete temp; temp=nullptr;
             }
             else
             {
@@ -144,24 +145,15 @@ class BSTree
 
     BSTNode * findMin(BSTNode * node)
     {
-        if(node==nullptr)
-        {
-            return node;
-        }
-        else if(node->_left ==nullptr && node->_right==nullptr)
-        {   
-            return node;
-        }
-        else if(node->_left->_data < node->_data)
-        {
-            return findMin(node->_left);
-        }else
-        {
-            return findMin(node->_right);
-        }
+        BSTNode * current = node;
+        while(current&&current->_left !=nullptr)
+            current=current->_left;
+        
+        return current;
     }
-
 };
+
+
 
 int main( int args, char ** argv){
 
@@ -169,19 +161,13 @@ int main( int args, char ** argv){
     btr.insert(4);
     btr.insert(1);
     btr.insert(2);
-    btr.insert(0);
+    btr.insert(3);
+    btr.insert(5);
     btr.insert(6);
-    btr.insert(8);
+    btr.insert(7);
+ 
     btr.print();
-    btr.search(7);
-    btr.search(2);
-    btr.search(34);
-    btr.insert(34);
+    btr.deleteNode(4);
     btr.print();
-    btr.search(34);
-    btr.deleteNode(34);
-    btr.deleteNode(8);
-    btr.print();
-
     return 0;
 }

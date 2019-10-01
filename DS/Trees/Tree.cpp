@@ -251,6 +251,20 @@ class BSTree
         return current;
     }
 
+    public:
+    int height()
+    {
+        return height(_tree);
+    }
+
+    private:
+    int height(BSTNode * node)
+    {
+        if (node==nullptr)
+            return -1;
+        return std::max(height(node->_left),height(node->_right))+1;
+    }
+
 };
 
 
@@ -269,7 +283,14 @@ int main( int args, char ** argv){
     btr.deleteNode(4);
     btr.print();
     btr.deleteNode(5);
+    btr.insert(8);
+    btr.insert(9);
+    btr.insert(10);
+    btr.insert(11);
+    btr.insert(12);
+    btr.insert(13);
     btr.print();
+    std::cout<< btr.height() << std::endl;
     std::cout<< btr.findMax() << " " << btr.findMin() << std::endl;
     btr.deleteTree();
     btr.print();

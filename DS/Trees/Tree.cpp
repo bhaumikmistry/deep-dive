@@ -221,14 +221,36 @@ class BSTree
         return node;
     }
 
+    public:
+    int findMin()
+    {
+        return findMin(_tree)->_data;
+    }
+
+    int findMax()
+    {
+        return findMax(_tree)->_data;
+    }
+
+    private:
     BSTNode * findMin(BSTNode * node)
     {
         BSTNode * current = node;
-        while(current&&current->_left !=nullptr)
+        while(current != nullptr && current->_left != nullptr)
             current=current->_left;
         
         return current;
     }
+
+    BSTNode * findMax(BSTNode * node)
+    {
+        BSTNode * current = node;
+        while(current !=nullptr && current->_right !=nullptr)
+            current = current->_right;
+
+        return current;
+    }
+
 };
 
 
@@ -248,6 +270,7 @@ int main( int args, char ** argv){
     btr.print();
     btr.deleteNode(5);
     btr.print();
+    std::cout<< btr.findMax() << " " << btr.findMin() << std::endl;
     btr.deleteTree();
     btr.print();
     return 0;

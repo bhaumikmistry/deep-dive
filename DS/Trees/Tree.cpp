@@ -200,14 +200,14 @@ class BSTree
             }
             else if(node->_left == nullptr)
             {
-                BSTNode * temp = node->_right;
+                BSTNode * temp = node;
                 node = node->_right;
                 delete temp; temp=nullptr;
                 
             }
             else if(node->_right == nullptr)
             {
-                BSTNode * temp = node->_left;
+                BSTNode * temp = node;
                 node = node->_left;
                 delete temp; temp=nullptr;
             }
@@ -243,6 +243,9 @@ int main( int args, char ** argv){
     btr.insert(5);
     btr.insert(6);
     btr.insert(7);
+    btr.print();
+    btr.deleteNode(4);
+    btr.print();
     btr.deleteNode(5);
     btr.print();
     btr.deleteTree();

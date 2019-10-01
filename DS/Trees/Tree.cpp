@@ -2,6 +2,10 @@
 #include <exception>
 
 
+/**
+ * @brief 
+ * Node used for the tree
+ */
 struct BSTNode
 {
     BSTNode(int i):_data(i){}
@@ -10,18 +14,35 @@ struct BSTNode
     BSTNode * _right=nullptr;
 };
 
+/**
+ * @brief 
+ * Tree class that holds the tree and the calls to manipulate the tree.
+ */
 class BSTree
 {
     private:
     BSTNode * _tree=nullptr;
     int print_helper = 0;
+
     public:
+    /**
+     * @brief Insert
+     * insert item to the tree in form of a node.
+     * @param i 
+     */
     void insert(int i)
     {
         _tree = insert(i,_tree);
     }
 
     private:
+    /**
+     * @brief Insert
+     * Private insert call used recursion
+     * @param i 
+     * @param node 
+     * @return BSTNode* 
+     */
     BSTNode * insert(int i,BSTNode * node){
         if(node==nullptr)
         {
@@ -37,11 +58,43 @@ class BSTree
     }
 
     public:
-    bool remove(int i,BSTNode * _node)
+    /**
+     * @brief 
+     * Delete entire tree
+     */
+    void deleteTree()
     {
-        return false;
+        _tree = deleteTree(_tree);
     }
 
+    private:
+    /**
+     * @brief 
+     * delete tree using recursion
+     * @param node 
+     * @return BSTNode* 
+     */
+    BSTNode *  deleteTree(BSTNode * node)
+    {
+        if (node == nullptr) return nullptr;  
+  
+        /* first delete both subtrees */
+        node->_left = deleteTree(node->_left);  
+        node->_right = deleteTree(node->_right);  
+            
+        /* then delete the node */
+        std::cout << "\n Deleting node: " << node->_data;  
+        delete node; node=nullptr;
+        return node; 
+    }
+    public:
+    /**
+     * @brief 
+     * search item.
+     * @param i 
+     * @return true 
+     * @return false 
+     */
     bool search(int i)
     {
         if(search (i,_tree)){
@@ -55,6 +108,15 @@ class BSTree
         }
     }
 
+    private:
+    /**
+     * @brief 
+     * Search call used for recursion
+     * @param i 
+     * @param _node 
+     * @return true 
+     * @return false 
+     */
     bool search (int i, BSTNode * _node)
     {
         if(_node!=nullptr){
@@ -75,6 +137,10 @@ class BSTree
     }
 
     public:
+    /**
+     * @brief Print tree
+     * 
+     */
     void print()
     {
         print(_tree);
@@ -99,12 +165,24 @@ class BSTree
     }
 
     public:
+    /**
+     * @brief public access to delete item
+     * 
+     * @param data 
+     */
     void deleteNode(int data)
     {
         _tree = deleteNode(_tree,data);
     }
 
     private:
+    /**
+     * @brief delete node
+     * delete call for recursion use.
+     * @param node 
+     * @param data 
+     * @return BSTNode* 
+     */
     BSTNode * deleteNode(BSTNode * node,int data)
     {
         if(node==nullptr)
@@ -165,9 +243,9 @@ int main( int args, char ** argv){
     btr.insert(5);
     btr.insert(6);
     btr.insert(7);
- 
+    btr.deleteNode(5);
     btr.print();
-    btr.deleteNode(4);
+    btr.deleteTree();
     btr.print();
     return 0;
 }

@@ -29,4 +29,11 @@
     - Height -> no of edges in longest part from root to a leaf.
     - Height of empty tree is -1
     - Height of three with 1 root and 1 node attached ``` diff = |hLeft - hRight|```
+- BFS DFS
+    - Use ```queue``` dequeue for BFS
+    - Use ```stack``` and ```array``` for DFS
+- Traverse
+    - Inorder ```left root right```
+    - Preorder ```root left right```
+    - Postorder ```left right root```
 

@@ -308,6 +308,44 @@ class BSTree
 
     }
 
+    public:
+    void BFS()
+    {
+        BFS(_tree);
+    }
+    void DFS()
+    {
+        DFS(_tree);
+    }
+    bool IsBinarySearchTree()
+    {
+        return IsBST(_tree,INT_MAX,INT_MIN);
+    }
+
+    private:
+    void BFS(BSTNode * node)
+    {
+
+    }
+    void DFS(BSTNode * node)
+    {
+        
+    }
+    bool IsBST(BSTNode * node,int max, int min)
+    {
+        if(node==nullptr) return true;
+        if(node->_data < max 
+        && node->_data > min
+        && IsBST(node->_left,node->_data,min)
+        && IsBST(node->_right,max,node->_data)
+        ){
+            return true;
+        }
+        else return false;
+
+    }
+
+
 };
 
 
@@ -327,6 +365,7 @@ int main( int args, char ** argv){
     btr.printInOrder(); 
     btr.printPreOrder();
     btr.printPostOrder();
+    std::cout << btr.IsBinarySearchTree();
 
     btr.deleteTree();
     btr.print();

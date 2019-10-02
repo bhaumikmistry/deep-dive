@@ -265,6 +265,49 @@ class BSTree
         return std::max(height(node->_left),height(node->_right))+1;
     }
 
+    public:
+    void printInOrder()
+    {
+        printInOrder(_tree);
+        std::cout<< std::endl;
+    }
+    void printPreOrder()
+    {
+        printPreOrder(_tree);
+        std::cout<< std::endl;
+    }
+    void printPostOrder()
+    {
+        printPostOrder(_tree);
+        std::cout<< std::endl;
+    }
+
+    private:
+    void printInOrder(BSTNode * node)
+    {
+        if(node==nullptr) return;
+        printInOrder(node->_left);
+        std::cout<< " " << node->_data ;
+        printInOrder(node->_right);
+    }
+
+    void printPreOrder(BSTNode * node)
+    {
+        if(node==nullptr) return;
+        std::cout<< " " << node->_data ;
+        printPreOrder(node->_left);
+        printPreOrder(node->_right);
+    }
+
+    void printPostOrder(BSTNode * node)
+    {
+        if(node==nullptr) return;
+        printPostOrder(node->_left);
+        printPostOrder(node->_right);
+        std::cout<< " " << node->_data ;
+
+    }
+
 };
 
 
@@ -273,25 +316,18 @@ int main( int args, char ** argv){
 
     BSTree btr;
     btr.insert(4);
-    btr.insert(1);
     btr.insert(2);
+    btr.insert(1);
     btr.insert(3);
-    btr.insert(5);
     btr.insert(6);
+    btr.insert(5);
     btr.insert(7);
     btr.print();
-    btr.deleteNode(4);
-    btr.print();
-    btr.deleteNode(5);
-    btr.insert(8);
-    btr.insert(9);
-    btr.insert(10);
-    btr.insert(11);
-    btr.insert(12);
-    btr.insert(13);
-    btr.print();
-    std::cout<< btr.height() << std::endl;
-    std::cout<< btr.findMax() << " " << btr.findMin() << std::endl;
+
+    btr.printInOrder(); 
+    btr.printPreOrder();
+    btr.printPostOrder();
+
     btr.deleteTree();
     btr.print();
     return 0;

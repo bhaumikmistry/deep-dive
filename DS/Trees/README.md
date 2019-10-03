@@ -37,3 +37,12 @@
     - Preorder ```root left right```
     - Postorder ```left right root```
 
+- Inorder Successor
+    - From any given node in the tree, find the next node that will be executed, or printed.
+        - First find the node with given data
+        - Check if the node is null
+        - Check if right child node is non null
+            if right node is valid return min value node as Inorder successor.
+        - Else 
+            - run while loop and check the ancestor node which is larger than current node
+
